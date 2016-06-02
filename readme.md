@@ -18,9 +18,9 @@ If you want to install it with python2, just simply remove the suffix "3", using
 If you have not installed pip3, you can run *apt-get install pip3* or install it by [official instruction](https://pip.readthedocs.org/en/stable/installing/).
 2. Download the Big Upload Plugin from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.
 3. Run setup command:
-```(python)
-$ sudo python3 setup.py install
-```
+
+    $ sudo python3 setup.py install
+
 4. Run Notebook:
 ```(python)
 $ jupyter notebook
