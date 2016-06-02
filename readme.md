@@ -65,7 +65,7 @@ The suffix star in the file name means this file has been modified. The square b
 
 ## Experiment
 ### Bitrate
-About 10MB/s ~ 20MB/s, in local host.
+About 10MB/s ~ 20MB/s, on local host.
 ### Multifile Upload
 Test passed, and the uploaded files had no difference.
 ### 5GB Big File Upload
