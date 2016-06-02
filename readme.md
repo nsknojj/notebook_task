@@ -6,22 +6,22 @@ Source Code: https://github.com/nsknojj/notebook/tree/big-upload
 [Jupyter](http://jupyter.org/) Notebook is a web-based notebook environment for interactive computing. It satisfies the demands of every user for processing data. However, while big data are accessible for a lot of users nowadays, Notebook doesn't support big file upload with web interface. It only allows uploading files up to 25MB. Big Upload Plugin is designed to solve this problem and keep this upload function compatible with Notebook.
 
 ## Usage - Setup Big Upload Plugin
-1. Make sure you have installed Jupyter.  
+1) Make sure you have installed Jupyter.  
 If not, you can find the installation documentation for the
 [Jupyter platform, on ReadTheDocs](http://jupyter.readthedocs.org/en/latest/install.html),   
 or you can install it with pip3:
-
-    $ sudo pip3 install jupyter
-
+```(python)
+$ sudo pip3 install jupyter
+```
 We recommend you add **sudo** before all commands to avoid some permission problems.  
 If you want to install it with python2, just simply remove the suffix "3", using "pip" instead of "pip3". This way is also effective in the following steps, e.g. replacing "python" with "python3".   
 If you have not installed pip3, you can run *apt-get install pip3* or install it by [official instruction](https://pip.readthedocs.org/en/stable/installing/).  
-2. Download the Big Upload Plugin from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.   
-3. Run setup command:
-
+2) Download the Big Upload Plugin from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.  
+3) Run setup command:
+```(python)
     $ sudo python3 setup.py install
-
-4. Run Notebook:
+```
+4) Run Notebook:
 ```(python)
 $ jupyter notebook
 ```
