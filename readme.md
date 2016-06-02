@@ -1,11 +1,11 @@
-# Big Upload Plugin for Jupyter Notebook
+# Big File Upload for Jupyter Notebook
 
 Author: [Wentao Zhang](zwt@pku.edu.cn)  
 Source Code: https://github.com/nsknojj/notebook/tree/big-upload
 
-[Jupyter](http://jupyter.org/) Notebook is a web-based notebook environment for interactive computing. It satisfies the demands of every user for processing data. However, while big data are accessible for a lot of users nowadays, Notebook doesn't support big file upload with web interface. It only allows uploading files up to 25MB. Big Upload Plugin is designed to solve this problem and keep this upload function compatible with Notebook.
+[Jupyter](http://jupyter.org/) Notebook is a web-based notebook environment for interactive computing. It satisfies the demands of every user for processing data. However, while big data are accessible for a lot of users nowadays, Notebook doesn't support big file upload with web interface. It only allows uploading files up to 25MB. Big Upload Module is designed to solve this problem and keep this upload function compatible with Notebook.
 
-## Usage - Setup Big Upload Plugin
+## Usage - Setup Big Upload Module
 Make sure you have installed Jupyter.  
 If not, you can find the installation documentation for the
 [Jupyter platform, on ReadTheDocs](http://jupyter.readthedocs.org/en/latest/install.html),   
@@ -13,11 +13,10 @@ or you can install it with pip3:
 ```(python)
 $ sudo pip3 install jupyter
 ```
-We recommend you add **sudo** before all commands to avoid some permission problems.  
-If you want to install it with python2, just simply remove the suffix "3", using "pip" instead of "pip3". This way is also effective in the following steps, e.g. replacing "python" with "python3".   
+If you want to install it with python2, use "pip" instead of "pip3". This way is also effective in the following steps, e.g. replacing "python" with "python3".
 If you have not installed pip3, you can run *apt-get install pip3* or install it by [official instruction](https://pip.readthedocs.org/en/stable/installing/).  
 
-Download the Big Upload Plugin from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.  
+Download the Big Upload Module from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.  
 
 Run setup command:
 ```(python)
@@ -30,9 +29,9 @@ $ jupyter notebook
 It will open your default browser. Now you can try to upload a big file in your notebook.    
 
 ![image](images/updemo.png)
-## Design - How The Plugin Works
+## Design - How Big File Upload Works
 ### Prototype: [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload)
-It has provided a jquery front end in which **chunked file upload** has been implemented, and a php back end to handle chunked file. All I need to do is transplanting the front end, and building a back end handler with tornado framework based on the given php server.
+It has provided a jquery front end in which **chunked file upload** has been implemented, and a php back end to handle chunked file. It provides a series of api, such as **stop** and **abort**. You can define your own callback functions for **add**, **progress**, etc.  All I need to do is transplanting the front end, and building a back end handler with tornado framework based on the given php server.
 ### The Front End & Back End of Jupyter Notebook
 * Notebook's back end is built with tornado framework. You can see all the url handlers in *notebook/services*. Handlers in *notebook/services/contents* are related to uploading, downloading, saving and other functions we don't concern.  
 * What I call front end are those webpages, scripts and style sheets.   
@@ -55,9 +54,9 @@ notebook
     |        `----[bigupload/js] # Now upload the chunked file to a new url: api/upload_handlers/($(file_path))
     |
     |----services
-    |        |----[bigupload/handlers.py] # Handle requests from new url
+    |        |----[bigupload/handlers.py] # Handle requests from a new url
     |
-    `----templates/tree.html* # Add a new button
+    `----templates/tree.html* # Add BigUpload button
 ```
 The suffix star in the file name means this file has been modified. The square brackets means this file is new.
 ### Divide Files to Chunks
