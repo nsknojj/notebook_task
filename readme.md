@@ -20,7 +20,7 @@ Download the Big Upload Module from its [Github Link](https://github.com/nsknojj
 
 Run setup command:
 ```(python)
-    $ sudo python3 setup.py install
+$ sudo python3 setup.py install
 ```
 Run Notebook:
 ```(python)
