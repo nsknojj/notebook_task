@@ -15,8 +15,8 @@ $ sudo pip3 install jupyter
 ```
 We recommend you add **sudo** before all commands to avoid some permission problems.  
 If you want to install it with python2, just simply remove the suffix "3", using "pip" instead of "pip3". This way is also effective in the following steps, e.g. replacing "python" with "python3".   
-If you have not installed pip3, you can run *apt-get install pip3* or install it by [official instruction](https://pip.readthedocs.org/en/stable/installing/).
-2. Download the Big Upload Plugin from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.
+If you have not installed pip3, you can run *apt-get install pip3* or install it by [official instruction](https://pip.readthedocs.org/en/stable/installing/).  
+2. Download the Big Upload Plugin from its [Github Link](https://github.com/nsknojj/notebook/tree/big-upload)  and put it in a position you like, then change to this directory in your cmd.  
 3. Run setup command:
 
     $ sudo python3 setup.py install
