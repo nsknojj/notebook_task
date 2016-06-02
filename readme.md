@@ -1,4 +1,4 @@
-# Jupyter Notebook Big Upload Plugin
+# Big Upload Plugin for Jupyter Notebook
 
 Author: [Wentao Zhang](zwt@pku.edu.cn)  
 Source Code: https://github.com/nsknojj/notebook/tree/big-upload
